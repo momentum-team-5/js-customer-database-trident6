@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.main-container {
+    margin: 5rem;
+}
