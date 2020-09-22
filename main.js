@@ -6,10 +6,6 @@ let target = document.querySelector('.main-container')
 // create a ul
 let list = document.createElement('ul')
 
-// let customerPicture = document.createElement('img')
-// customerPicture.innerHTML = customers[0].picture.medium
-// customerPicture.appendChild(itemNameEl)
-
 // // append the ul to the dom
 
 target.appendChild(list)
@@ -19,18 +15,31 @@ for (let customer of customers) {
     let listItem = document.createElement('li')
     console.log(listItem)
 
-    // create a p element
+    // create an image element
+
+    let customerPicture = document.createElement('img')
+    customerPicture.classList.add('customerPicture')
+    customerPicture.src = customer.picture.medium
+    listItem.appendChild(customerPicture)
+
+    // create a p element for name
 
     let itemNameEl = document.createElement('p')
-
-    itemNameEl.innerText = customers[0].name.first
+    fullName = `${customer.name.first} ${customer.name.last}`
+    itemNameEl.innerText = fullName
+    itemNameEl.classList.add('customer-name')
     listItem.appendChild(itemNameEl)
     list.appendChild(listItem)
+
+
+
 }
 
-//     let customerPicture = document.createElement('img')
-//     customerPicture.innerHTML = customers[0].picture.medium
-//     listItem.appendChild(itemNameEl)
+
+
+
+
+
 // 
 
 
